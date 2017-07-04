@@ -13,12 +13,11 @@ import interfaces.Sortable;
 public class BubbleSort<T> implements Sortable<T> {
     @Override
     public void sort(Listable<T> list, Comparator<T> comparator) {
-        for (int i = 0; i < list.size(); i++) { // how many times createList max n-1
-            for (int j = 0; j < list.size() - 1; j++) { // check all elements and swap if necessary
+        for (int i = 0; i < list.size(); i++) {
+            for (int j = 0; j < list.size() - 1; j++) {
                 if (comparator.compare(list.get(j), list.get(j+1)) > 0) {
                     list.swap(j, j+1);
                 }
-
             }
         }
     }

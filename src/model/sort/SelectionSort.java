@@ -11,7 +11,7 @@ import interfaces.Sortable;
  */
 public class SelectionSort<T> implements Sortable<T> {
     @Override
-    public void sort(Listable<T> list, Comparator<T> comparator) {
+        public void sort(Listable<T> list, Comparator<T> comparator) {
         for (int i = 0; i < list.size() - 1; i++) {
             int min = i;
             for (int j = i + 1; j < list.size(); j++) {
